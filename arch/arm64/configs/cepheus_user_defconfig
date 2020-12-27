@@ -850,3 +850,6 @@ CONFIG_RD_LZ4=y
 
 # Add Boeffla WL Blocker
 CONFIG_BOEFFLA_WL_BLOCKER=y
+
+# Add Dynamic Fsync
+CONFIG_DYNAMIC_FSYNC=y
