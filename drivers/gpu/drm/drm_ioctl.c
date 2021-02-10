@@ -2,6 +2,7 @@
  * Created: Fri Jan  8 09:01:26 1999 by faith@valinux.com
  *
  * Copyright 1999 Precision Insight, Inc., Cedar Park, Texas.
+ * Copyright (C) 2021 XiaoMi, Inc.
  * Copyright 2000 VA Linux Systems, Inc., Sunnyvale, California.
  * All Rights Reserved.
  *
@@ -502,13 +503,14 @@ static bool drm_master_filter(char *task_name)
 {
 	unsigned int i = 0;
 	bool ret = false;
-	//pr_debug("%s task_name:%s \n", __func__, task_name);
-	for (i=0; i<MAX_LIST_NUM; i++) {
+
+	for (i = 0; i < MAX_LIST_NUM; i++) {
 		if (!strncmp(task_name, support_list[i], strlen(support_list[i]))) {
 			ret = true;
 			break;
 		}
 	}
+	
 	return ret;
 }
 

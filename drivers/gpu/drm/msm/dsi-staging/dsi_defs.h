@@ -1,5 +1,6 @@
 /*
  * Copyright (c) 2016-2020, The Linux Foundation. All rights reserved.
+ * Copyright (C) 2021 XiaoMi, Inc.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -284,6 +285,7 @@ enum dsi_dyn_clk_feature_type {
  * @DSI_CMD_SET_QSYNC_OFF                  Disable qsync mode
  * @DSI_CMD_SET_MAX
  */
+
 enum dsi_cmd_set_type {
 	DSI_CMD_SET_PRE_ON = 0,
 	DSI_CMD_SET_ON,
@@ -298,6 +300,7 @@ enum dsi_cmd_set_type {
 	DSI_CMD_SET_POST_CMD_TO_VID_SWITCH,
 	DSI_CMD_SET_VID_TO_CMD_SWITCH,
 	DSI_CMD_SET_POST_VID_TO_CMD_SWITCH,
+	DSI_CMD_SET_PANEL_STATUS_OFFSET,
 	DSI_CMD_SET_PANEL_STATUS,
 	DSI_CMD_SET_LP1,
 	DSI_CMD_SET_LP2,
@@ -340,6 +343,9 @@ enum dsi_cmd_set_type {
 	DSI_CMD_SET_DISP_ACL_L1,
 	DSI_CMD_SET_DISP_ACL_L2,
 	DSI_CMD_SET_DISP_ACL_L3,
+	DSI_CMD_SET_DISP_LCD_HBM_L1_ON,
+	DSI_CMD_SET_DISP_LCD_HBM_L2_ON,
+	DSI_CMD_SET_DISP_LCD_HBM_OFF,
 	DSI_CMD_SET_DISP_HBM_ON,
 	DSI_CMD_SET_DISP_HBM_OFF,
 	DSI_CMD_SET_DISP_HBM_FOD_ON,
@@ -356,8 +362,23 @@ enum dsi_cmd_set_type {
 	DSI_CMD_SET_DISP_CRC_DCIP3,
 	DSI_CMD_SET_DISP_CRC_OFF,
 	DSI_CMD_SET_DISP_ELVSS_DIMMING_OFF,
+	DSI_CMD_SET_READ_LOCKDOWN_INFO,
+	DSI_CMD_SET_DISP_ONE_PLUSE,
+	DSI_CMD_SET_DISP_FOUR_PLUSE,
+	DSI_CMD_SET_DISP_FLAT_MODE_ON,
+	DSI_CMD_SET_DISP_FLAT_MODE_OFF,
+	DSI_CMD_SET_DISP_DEMURA_LEVEL02,
+	DSI_CMD_SET_DISP_DEMURA_LEVEL08,
+	DSI_CMD_SET_DISP_DEMURA_LEVEL0D,
+	DSI_CMD_SET_DISP_DC_DEMURA_L1,
+	DSI_CMD_SET_DISP_DC_DEMURA_L2,
+	DSI_CMD_SET_DISP_DC_ON,
+	DSI_CMD_SET_DISP_DC_OFF,
+	DSI_CMD_SET_DISP_BC_120HZ,
+	DSI_CMD_SET_DISP_BC_60HZ,
 	DSI_CMD_SET_MAX
 };
+
 
 /**
  * enum dsi_cmd_set_state - command set state

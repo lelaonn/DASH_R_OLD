@@ -31,6 +31,7 @@ enum {
 	DOZE_BRIGHTNESS_INVALID = 0,
 	DOZE_BRIGHTNESS_HBM,
 	DOZE_BRIGHTNESS_LBM,
+	DOZE_BRIGHTNESS_TO_NORMAL,
 };
 
 /**
@@ -196,8 +197,8 @@ struct drm_device {
 	/*@} */
 	int switch_power_state;
 	int doze_state;
+	int pre_state;
 	int doze_brightness;
-	bool fp_quickon;
 };
 
 #endif
